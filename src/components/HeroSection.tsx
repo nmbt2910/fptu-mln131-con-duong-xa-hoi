@@ -32,9 +32,6 @@ const HeroSection = () => {
             ở Việt Nam
           </h1>
           <div className="section-divider w-48 mx-auto mb-8" />
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: "var(--font-accent)" }}>
-            Kính thưa thầy cô và các bạn, hôm nay nhóm chúng em trình bày nội dung Quá độ lên chủ nghĩa xã hội bỏ qua chế độ tư bản chủ nghĩa ở Việt Nam, thuộc Chương 3 của giáo trình Chủ nghĩa xã hội khoa học.
-          </p>
         </motion.div>
 
         <motion.div
@@ -45,10 +42,10 @@ const HeroSection = () => {
         >
           <nav className="inline-flex flex-wrap justify-center gap-3">
             {[
-              "1. Giới thiệu chung về CNXH",
+              "1. Giới thiệu chung về Chủ nghĩa Xã hội",
               "2. Tính tất yếu & đặc điểm",
-              "3. Bỏ qua TBCN ở Việt Nam",
-              "4. Đặc trưng CNXH Việt Nam",
+              "3. Bỏ qua Tư bản Chủ nghĩa ở Việt Nam",
+              "4. Đặc trưng Chủ nghĩa Xã hội Việt Nam",
               "5. Phương hướng & Kết luận",
             ].map((item, i) => (
               <span

@@ -12,32 +12,33 @@ const SectionTransition = () => {
         <motion.div variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <h2 className="text-2xl md:text-4xl font-bold text-primary mb-2">Phần 2</h2>
           <h3 className="text-xl md:text-3xl font-semibold text-foreground mb-4">
-            Tính tất yếu và đặc điểm của thời kỳ quá độ lên CNXH
+            Tính tất yếu và đặc điểm của thời kỳ quá độ lên Chủ nghĩa Xã hội
           </h3>
           <div className="section-divider w-32 mb-12" />
         </motion.div>
 
-        {/* 2.1 */}
+        {/* 2.1 — Magazine editorial style with large pull quotes */}
         <motion.div variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-16">
           <h4 className="text-lg md:text-2xl font-semibold text-gold-dark mb-6">
             2.1. Tính tất yếu khách quan của thời kỳ quá độ
           </h4>
           <p className="text-sm text-muted-foreground mb-6 italic">(Giáo trình, tr. 104–106)</p>
 
-          <div className="bg-card rounded-xl border border-border p-6 md:p-8 mb-6">
+          <div className="bg-card rounded-xl border border-border p-6 md:p-8 mb-8">
             <p className="text-base md:text-lg leading-relaxed text-foreground">
-              Học thuyết hình thái kinh tế – xã hội của chủ nghĩa Mác – Lênin đã chỉ rõ: lịch sử xã hội trải qua 5 hình thái: cộng sản nguyên thủy, chiếm hữu nô lệ, phong kiến, tư bản chủ nghĩa và cộng sản chủ nghĩa. Từ CHỦ NGHĨA TƯ BẢN lên CHỦ NGHĨA XÃ HỘI tất yếu phải trải qua thời kỳ quá độ chính trị.
+              Học thuyết hình thái kinh tế – xã hội của chủ nghĩa Mác – Lênin đã chỉ rõ: lịch sử xã hội trải qua 5 hình thái: cộng sản nguyên thủy, chiếm hữu nô lệ, phong kiến, tư bản chủ nghĩa và cộng sản chủ nghĩa. Từ Chủ nghĩa Tư bản lên Chủ nghĩa Xã hội tất yếu phải trải qua thời kỳ quá độ chính trị.
             </p>
           </div>
 
-          {/* Quotes */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          {/* Pull quotes — large editorial style */}
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-8">
             <motion.blockquote
               variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="bg-card rounded-xl border-l-4 border-accent p-6 md:p-8"
+              className="lg:col-span-3 relative bg-gradient-to-br from-card to-secondary/30 rounded-2xl p-8 md:p-10 border border-border"
             >
-              <p className="text-base md:text-lg italic leading-relaxed text-foreground mb-4">
-                "Giữa xã hội tư bản chủ nghĩa và xã hội cộng sản chủ nghĩa là một thời kỳ cải biến cách mạng; nhà nước của thời kỳ ấy là nền chuyên chính cách mạng của giai cấp vô sản."
+              <span className="absolute -top-4 left-6 text-7xl text-primary/20 font-black leading-none">"</span>
+              <p className="text-lg md:text-xl italic leading-relaxed text-foreground mb-4 pt-4">
+                Giữa xã hội tư bản chủ nghĩa và xã hội cộng sản chủ nghĩa là một thời kỳ cải biến cách mạng; nhà nước của thời kỳ ấy là nền chuyên chính cách mạng của giai cấp vô sản.
               </p>
               <footer className="text-sm font-semibold text-primary">
                 — C. Mác (Toàn tập, t.19, tr.47)
@@ -46,10 +47,11 @@ const SectionTransition = () => {
 
             <motion.blockquote
               variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="bg-card rounded-xl border-l-4 border-primary p-6 md:p-8"
+              className="lg:col-span-2 relative bg-gradient-to-br from-primary/10 to-card rounded-2xl p-8 md:p-10 border border-primary/20"
             >
-              <p className="text-base md:text-lg italic leading-relaxed text-foreground mb-4">
-                "Về lý luận, không thể nghi ngờ gì được rằng giữa chủ nghĩa tư bản và chủ nghĩa cộng sản, có một thời kỳ quá độ nhất định."
+              <span className="absolute -top-4 left-6 text-7xl text-accent/20 font-black leading-none">"</span>
+              <p className="text-base md:text-lg italic leading-relaxed text-foreground mb-4 pt-4">
+                Về lý luận, không thể nghi ngờ gì được rằng giữa chủ nghĩa tư bản và chủ nghĩa cộng sản, có một thời kỳ quá độ nhất định.
               </p>
               <footer className="text-sm font-semibold text-primary">
                 — V.I. Lênin (Toàn tập, t.39, tr.309)
@@ -64,28 +66,33 @@ const SectionTransition = () => {
             <p className="text-sm text-muted-foreground mt-3 italic">(Giáo trình, tr. 89; C. Mác và Ph. Ăngghen: Toàn tập, t.19, tr.33)</p>
           </div>
 
-          {/* Two types of transition */}
+          {/* Two types — side by side with contrasting visual weight */}
           <h5 className="text-base md:text-xl font-semibold text-foreground mb-4">Hai loại quá độ:</h5>
-          <div className="space-y-4 mb-8">
-            <div className="flex gap-4 items-start bg-card rounded-xl border border-border p-6">
-              <span className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-lg">1</span>
-              <div>
-                <h6 className="font-semibold text-base md:text-lg text-foreground mb-2">Quá độ trực tiếp</h6>
-                <p className="text-base leading-relaxed text-foreground">
-                  Từ chủ nghĩa tư bản lên chủ nghĩa cộng sản đối với những nước đã trải qua chủ nghĩa tư bản phát triển. Cho đến nay thời kỳ quá độ trực tiếp lên chủ nghĩa cộng sản từ chủ nghĩa tư bản phát triển chưa từng diễn ra.
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <motion.div variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }}
+              className="bg-card rounded-2xl border-2 border-accent/30 p-6 md:p-8 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-accent/5 rounded-bl-full" />
+              <div className="w-14 h-14 rounded-2xl bg-accent/20 flex items-center justify-center mb-4">
+                <span className="text-2xl font-black text-accent">1</span>
               </div>
-            </div>
-            <div className="flex gap-4 items-start bg-card rounded-xl border border-border p-6">
-              <span className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg">2</span>
-              <div>
-                <h6 className="font-semibold text-base md:text-lg text-foreground mb-2">Quá độ gián tiếp</h6>
-                <p className="text-base leading-relaxed text-foreground">
-                  Từ chủ nghĩa tư bản lên chủ nghĩa cộng sản đối với những nước chưa trải qua chủ nghĩa tư bản phát triển. Trên thế giới một thế kỷ qua, kể cả Liên Xô và các nước xã hội chủ nghĩa Đông Âu trước đây, Trung Quốc, Việt Nam và một số nước xã hội chủ nghĩa khác ngày nay, theo đúng lý luận Mác – Lênin, đều đang trải qua thời kỳ quá độ gián tiếp với những trình độ phát triển khác nhau.
-                </p>
-                <p className="text-sm text-muted-foreground mt-2 italic">(Giáo trình, tr. 105)</p>
+              <h6 className="font-bold text-lg md:text-xl text-foreground mb-3">Quá độ trực tiếp</h6>
+              <p className="text-base leading-relaxed text-foreground">
+                Từ chủ nghĩa tư bản lên chủ nghĩa cộng sản đối với những nước đã trải qua chủ nghĩa tư bản phát triển. Cho đến nay thời kỳ quá độ trực tiếp lên chủ nghĩa cộng sản từ chủ nghĩa tư bản phát triển chưa từng diễn ra.
+              </p>
+            </motion.div>
+
+            <motion.div variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }}
+              className="bg-card rounded-2xl border-2 border-primary/30 p-6 md:p-8 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full" />
+              <div className="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center mb-4">
+                <span className="text-2xl font-black text-primary">2</span>
               </div>
-            </div>
+              <h6 className="font-bold text-lg md:text-xl text-foreground mb-3">Quá độ gián tiếp</h6>
+              <p className="text-base leading-relaxed text-foreground">
+                Từ chủ nghĩa tư bản lên chủ nghĩa cộng sản đối với những nước chưa trải qua chủ nghĩa tư bản phát triển. Trên thế giới một thế kỷ qua, kể cả Liên Xô và các nước xã hội chủ nghĩa Đông Âu trước đây, Trung Quốc, Việt Nam và một số nước xã hội chủ nghĩa khác ngày nay, theo đúng lý luận Mác – Lênin, đều đang trải qua thời kỳ quá độ gián tiếp với những trình độ phát triển khác nhau.
+              </p>
+              <p className="text-sm text-muted-foreground mt-3 italic">(Giáo trình, tr. 105)</p>
+            </motion.div>
           </div>
 
           <motion.blockquote
@@ -99,7 +106,7 @@ const SectionTransition = () => {
           </motion.blockquote>
         </motion.div>
 
-        {/* 2.2 */}
+        {/* 2.2 — Two-column cards with icon badges */}
         <motion.div variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-16">
           <h4 className="text-lg md:text-2xl font-semibold text-gold-dark mb-6">
             2.2. Điều kiện ra đời của Chủ nghĩa Xã hội
@@ -131,10 +138,10 @@ const SectionTransition = () => {
           </div>
         </motion.div>
 
-        {/* 2.3 */}
+        {/* 2.3 — Hexagonal numbered list with alternating accents */}
         <motion.div variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-16">
           <h4 className="text-lg md:text-2xl font-semibold text-gold-dark mb-6">
-            2.3. Những đặc trưng bản chất của CNXH theo Mác – Lênin
+            2.3. Những đặc trưng bản chất của Chủ nghĩa Xã hội theo Mác – Lênin
           </h4>
           <p className="text-sm text-muted-foreground mb-6 italic">(Giáo trình, tr. 93–103)</p>
 
@@ -142,14 +149,14 @@ const SectionTransition = () => {
             Căn cứ vào những dự báo của C. Mác và Ph. Ăngghen và những quan điểm của V.I. Lênin về chủ nghĩa xã hội ở nước Nga Xôviết, có thể khái quát những đặc trưng cơ bản của chủ nghĩa xã hội như sau:
           </p>
 
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {[
-              { num: 1, text: "CNXH giải phóng giai cấp, giải phóng dân tộc, giải phóng xã hội, giải phóng con người, tạo điều kiện để con người phát triển toàn diện. Đây là sự khác biệt về chất so với các hình thái kinh tế – xã hội trước. (tr. 93–95)" },
-              { num: 2, text: "CNXH có nền kinh tế phát triển cao dựa trên lực lượng sản xuất hiện đại và chế độ công hữu về tư liệu sản xuất được phân phối chủ yếu theo lao động. V.I. Lênin cho rằng \"Từ CHỦ NGHĨA TƯ BẢN, nhân loại chỉ có thể tiến thẳng lên CHỦ NGHĨA XÃ HỘI, nghĩa là lên chế độ công hữu về các tư liệu sản xuất và chế độ phân phối sản phẩm theo lao động của mỗi người.\" (V.I. Lênin: Toàn tập, t.31, tr.220). (tr. 95–97)" },
-              { num: 3, text: "CNXH là chế độ xã hội do nhân dân lao động làm chủ. (tr. 98)" },
-              { num: 4, text: "CNXH có nhà nước kiểu mới mang bản chất giai cấp công nhân, đại diện cho lợi ích, quyền lực và ý chí của nhân dân lao động. (tr. 98–99)" },
-              { num: 5, text: "CNXH có nền văn hóa phát triển cao, kế thừa và phát huy những giá trị của văn hóa dân tộc và tinh hoa văn hóa nhân loại. (tr. 100–101)" },
-              { num: 6, text: "CNXH bảo đảm bình đẳng, đoàn kết giữa các dân tộc và có quan hệ hữu nghị, hợp tác với nhân dân các nước trên thế giới. (tr. 101–103)" },
+              { num: 1, text: "Chủ nghĩa Xã hội giải phóng giai cấp, giải phóng dân tộc, giải phóng xã hội, giải phóng con người, tạo điều kiện để con người phát triển toàn diện. Đây là sự khác biệt về chất so với các hình thái kinh tế – xã hội trước. (tr. 93–95)", accent: "primary" },
+              { num: 2, text: "Chủ nghĩa Xã hội có nền kinh tế phát triển cao dựa trên lực lượng sản xuất hiện đại và chế độ công hữu về tư liệu sản xuất được phân phối chủ yếu theo lao động. V.I. Lênin cho rằng \"Từ Chủ nghĩa Tư bản, nhân loại chỉ có thể tiến thẳng lên Chủ nghĩa Xã hội, nghĩa là lên chế độ công hữu về các tư liệu sản xuất và chế độ phân phối sản phẩm theo lao động của mỗi người.\" (V.I. Lênin: Toàn tập, t.31, tr.220). (tr. 95–97)", accent: "accent" },
+              { num: 3, text: "Chủ nghĩa Xã hội là chế độ xã hội do nhân dân lao động làm chủ. (tr. 98)", accent: "gold-dark" },
+              { num: 4, text: "Chủ nghĩa Xã hội có nhà nước kiểu mới mang bản chất giai cấp công nhân, đại diện cho lợi ích, quyền lực và ý chí của nhân dân lao động. (tr. 98–99)", accent: "primary" },
+              { num: 5, text: "Chủ nghĩa Xã hội có nền văn hóa phát triển cao, kế thừa và phát huy những giá trị của văn hóa dân tộc và tinh hoa văn hóa nhân loại. (tr. 100–101)", accent: "accent" },
+              { num: 6, text: "Chủ nghĩa Xã hội bảo đảm bình đẳng, đoàn kết giữa các dân tộc và có quan hệ hữu nghị, hợp tác với nhân dân các nước trên thế giới. (tr. 101–103)", accent: "gold-dark" },
             ].map((item) => (
               <motion.div
                 key={item.num}
@@ -157,48 +164,55 @@ const SectionTransition = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="flex gap-4 items-start"
+                className={`bg-card rounded-2xl border border-border p-6 relative overflow-hidden`}
               >
-                <span className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">
+                <span className={`absolute -top-2 -right-2 text-[5rem] font-black opacity-[0.06] leading-none select-none text-${item.accent}`}>
                   {item.num}
                 </span>
-                <p className="text-base md:text-lg leading-relaxed text-foreground pt-1">{item.text}</p>
+                <div className={`w-10 h-10 rounded-xl bg-${item.accent}/20 flex items-center justify-center font-bold text-lg text-${item.accent} mb-3`}>
+                  {item.num}
+                </div>
+                <p className="text-base md:text-lg leading-relaxed text-foreground">{item.text}</p>
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        {/* 2.4 */}
+        {/* 2.4 — Horizontal tabs-like layout with colored left borders */}
         <motion.div variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-16">
           <h4 className="text-lg md:text-2xl font-semibold text-gold-dark mb-6">
-            2.4. Đặc điểm của thời kỳ quá độ lên CNXH
+            2.4. Đặc điểm của thời kỳ quá độ lên Chủ nghĩa Xã hội
           </h4>
           <p className="text-sm text-muted-foreground mb-4 italic">(Giáo trình, tr. 107–109)</p>
           <p className="text-base md:text-lg leading-relaxed text-foreground mb-8">
             Thực chất là thời kỳ cải biến cách mạng sâu sắc, triệt để từ xã hội tiền tư bản chủ nghĩa và tư bản chủ nghĩa sang xã hội chủ nghĩa. Có thể khái quát những đặc điểm cơ bản như sau:
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="space-y-5">
             {[
               {
                 title: "a) Lĩnh vực kinh tế",
-                content: "Tất yếu tồn tại nền kinh tế nhiều thành phần, trong đó có thành phần đối lập. Lênin chỉ rõ ở Nga tồn tại 5 thành phần: kinh tế gia trưởng; kinh tế hàng hóa nhỏ; kinh tế tư bản; kinh tế tư bản nhà nước; kinh tế XHCN. (V.I. Lênin: Toàn tập, t.36, tr.362) (Giáo trình, tr. 107–108)",
-                color: "accent",
+                content: "Tất yếu tồn tại nền kinh tế nhiều thành phần, trong đó có thành phần đối lập. Lênin chỉ rõ ở Nga tồn tại 5 thành phần: kinh tế gia trưởng; kinh tế hàng hóa nhỏ; kinh tế tư bản; kinh tế tư bản nhà nước; kinh tế xã hội chủ nghĩa. (V.I. Lênin: Toàn tập, t.36, tr.362) (Giáo trình, tr. 107–108)",
+                borderColor: "border-l-accent",
+                bgColor: "bg-accent/5",
               },
               {
                 title: "b) Lĩnh vực chính trị",
                 content: "Thiết lập và tăng cường chuyên chính vô sản – giai cấp công nhân nắm quyền lực nhà nước, trấn áp giai cấp tư sản, xây dựng xã hội không giai cấp. Đây là sự thống trị về chính trị của giai cấp công nhân với chức năng thực hiện dân chủ đối với nhân dân, tổ chức xây dựng và bảo vệ chế độ mới. (Giáo trình, tr. 108)",
-                color: "primary",
+                borderColor: "border-l-primary",
+                bgColor: "bg-primary/5",
               },
               {
                 title: "c) Lĩnh vực tư tưởng – văn hóa",
                 content: "Còn tồn tại nhiều tư tưởng (chủ yếu: tư tưởng vô sản và tư tưởng tư sản). Giai cấp công nhân thông qua đội tiền phong của mình là Đảng Cộng sản từng bước xây dựng văn hóa vô sản, nền văn hóa mới xã hội chủ nghĩa, tiếp thu giá trị văn hóa dân tộc và tinh hoa nhân loại. (Giáo trình, tr. 108–109)",
-                color: "gold-dark",
+                borderColor: "border-l-gold-dark",
+                bgColor: "bg-secondary/40",
               },
               {
                 title: "d) Lĩnh vực xã hội",
                 content: "Do kết cấu của nền kinh tế nhiều thành phần quy định nên trong thời kỳ quá độ còn tồn tại nhiều giai cấp, tầng lớp và sự khác biệt giữa các giai cấp tầng lớp xã hội, các giai cấp, tầng lớp vừa hợp tác, vừa đấu tranh với nhau. Trong xã hội của thời kỳ quá độ còn tồn tại sự khác biệt giữa nông thôn, thành thị, giữa lao động trí óc và lao động chân tay. (Giáo trình, tr. 109)",
-                color: "brown",
+                borderColor: "border-l-brown",
+                bgColor: "bg-card",
               },
             ].map((item, i) => (
               <motion.div
@@ -207,7 +221,7 @@ const SectionTransition = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="bg-card rounded-xl border border-border p-6 md:p-8"
+                className={`${item.bgColor} rounded-r-xl border-l-4 ${item.borderColor} p-6 md:p-8`}
               >
                 <h5 className="text-lg md:text-xl font-bold text-foreground mb-3">{item.title}</h5>
                 <p className="text-base leading-relaxed text-foreground">{item.content}</p>
@@ -216,7 +230,7 @@ const SectionTransition = () => {
           </div>
         </motion.div>
 
-        {/* 2.5 - Đặc điểm xuất phát điểm VN */}
+        {/* 2.5 — Highlight boxes */}
         <motion.div variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <h4 className="text-lg md:text-2xl font-semibold text-gold-dark mb-6">
             e) Đặc điểm xuất phát điểm của Việt Nam
