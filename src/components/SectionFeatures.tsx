@@ -53,7 +53,7 @@ const SectionFeatures = () => {
             Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội (1991) đã xác định mô hình chủ nghĩa xã hội ở nước ta với sáu đặc trưng:
           </p>
 
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {sixFeatures.map((f, i) => (
               <motion.div
                 key={i}
@@ -61,7 +61,7 @@ const SectionFeatures = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="break-inside-avoid bg-card rounded-2xl border border-border p-5 md:p-6 relative overflow-hidden"
+                className="bg-card rounded-2xl border border-border p-5 md:p-6 relative overflow-hidden h-full flex flex-col"
               >
                 <div className="absolute top-3 right-3 w-10 h-10 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
                   <span className="text-lg font-black text-primary/40">{i + 1}</span>

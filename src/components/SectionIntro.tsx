@@ -62,7 +62,7 @@ const SectionIntro = () => {
               className="flex-1 bg-card rounded-2xl border border-border p-6 relative overflow-hidden group"
             >
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-gold-dark opacity-30 group-hover:opacity-60 transition-opacity" />
-              <span className="text-4xl font-black text-gold/15 select-none block mb-2">
+              <span className="text-4xl font-black text-primary/40 select-none block mb-2">
                 {item.num}
               </span>
               <h5 className="text-lg md:text-xl font-bold text-primary mb-2">{item.title}</h5>

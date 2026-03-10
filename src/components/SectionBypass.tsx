@@ -39,22 +39,22 @@ const SectionBypass = () => {
               {
                 label: "Thứ nhất",
                 text: "Quá độ lên chủ nghĩa xã hội bỏ qua chế độ tư bản chủ nghĩa là con đường cách mạng tất yếu khách quan, con đường xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội ở nước ta.",
-                bg: "bg-primary/8",
+                bg: "bg-primary/[0.03]",
               },
               {
                 label: "Thứ hai",
                 text: "Quá độ lên chủ nghĩa xã hội bỏ qua chế độ tư bản chủ nghĩa, tức là bỏ qua việc xác lập vị trí thống trị của quan hệ sản xuất và kiến trúc thượng tầng tư bản chủ nghĩa. Trong thời kỳ quá độ vẫn còn nhiều hình thức sở hữu, nhiều thành phần kinh tế, nhưng sở hữu tư nhân tư bản chủ nghĩa và thành phần kinh tế tư nhân tư bản chủ nghĩa không chiếm vai trò chủ đạo; thời kỳ quá độ còn nhiều hình thức phân phối, ngoài phân phối theo lao động vẫn là chủ đạo còn phân phối theo mức độ đóng góp và quỹ phúc lợi xã hội.",
-                bg: "bg-accent/8",
+                bg: "bg-primary/[0.06]",
               },
               {
                 label: "Thứ ba",
                 text: "Quá độ lên chủ nghĩa xã hội bỏ qua chế độ tư bản chủ nghĩa đòi hỏi phải tiếp thu, kế thừa những thành tựu mà nhân loại đã đạt được dưới chủ nghĩa tư bản, đặc biệt là những thành tựu về khoa học và công nghệ, thành tựu về quản lý phát triển xã hội, đặc biệt là xây dựng nền kinh tế hiện đại, phát triển nhanh lực lượng sản xuất.",
-                bg: "bg-secondary/40",
+                bg: "bg-primary/[0.09]",
               },
               {
                 label: "Thứ tư",
                 text: "Quá độ lên chủ nghĩa xã hội bỏ qua chế độ tư bản chủ nghĩa là tạo ra sự biến đổi về chất của xã hội trên tất cả các lĩnh vực, là sự nghiệp rất khó khăn, phức tạp, lâu dài với nhiều chặng đường, nhiều hình thức tổ chức kinh tế, xã hội có tính chất quá độ đòi hỏi phải có quyết tâm chính trị cao và khát vọng lớn của toàn Đảng, toàn dân.",
-                bg: "bg-card",
+                bg: "bg-primary/[0.12]",
               },
             ].map((item, i) => (
               <motion.div

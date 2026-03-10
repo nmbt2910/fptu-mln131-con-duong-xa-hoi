@@ -151,12 +151,12 @@ const SectionTransition = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {[
-              { num: 1, text: "Chủ nghĩa Xã hội giải phóng giai cấp, giải phóng dân tộc, giải phóng xã hội, giải phóng con người, tạo điều kiện để con người phát triển toàn diện. Đây là sự khác biệt về chất so với các hình thái kinh tế – xã hội trước. (tr. 93–95)", accent: "primary" },
-              { num: 2, text: "Chủ nghĩa Xã hội có nền kinh tế phát triển cao dựa trên lực lượng sản xuất hiện đại và chế độ công hữu về tư liệu sản xuất được phân phối chủ yếu theo lao động. V.I. Lênin cho rằng \"Từ Chủ nghĩa Tư bản, nhân loại chỉ có thể tiến thẳng lên Chủ nghĩa Xã hội, nghĩa là lên chế độ công hữu về các tư liệu sản xuất và chế độ phân phối sản phẩm theo lao động của mỗi người.\" (V.I. Lênin: Toàn tập, t.31, tr.220). (tr. 95–97)", accent: "accent" },
-              { num: 3, text: "Chủ nghĩa Xã hội là chế độ xã hội do nhân dân lao động làm chủ. (tr. 98)", accent: "gold-dark" },
-              { num: 4, text: "Chủ nghĩa Xã hội có nhà nước kiểu mới mang bản chất giai cấp công nhân, đại diện cho lợi ích, quyền lực và ý chí của nhân dân lao động. (tr. 98–99)", accent: "primary" },
-              { num: 5, text: "Chủ nghĩa Xã hội có nền văn hóa phát triển cao, kế thừa và phát huy những giá trị của văn hóa dân tộc và tinh hoa văn hóa nhân loại. (tr. 100–101)", accent: "accent" },
-              { num: 6, text: "Chủ nghĩa Xã hội bảo đảm bình đẳng, đoàn kết giữa các dân tộc và có quan hệ hữu nghị, hợp tác với nhân dân các nước trên thế giới. (tr. 101–103)", accent: "gold-dark" },
+              { num: 1, text: "Chủ nghĩa Xã hội giải phóng giai cấp, giải phóng dân tộc, giải phóng xã hội, giải phóng con người, tạo điều kiện để con người phát triển toàn diện. Đây là sự khác biệt về chất so với các hình thái kinh tế – xã hội trước. (tr. 93–95)", bg: "bg-primary/20", textClass: "text-primary" },
+              { num: 2, text: "Chủ nghĩa Xã hội có nền kinh tế phát triển cao dựa trên lực lượng sản xuất hiện đại và chế độ công hữu về tư liệu sản xuất được phân phối chủ yếu theo lao động. V.I. Lênin cho rằng \"Từ Chủ nghĩa Tư bản, nhân loại chỉ có thể tiến thẳng lên Chủ nghĩa Xã hội, nghĩa là lên chế độ công hữu về các tư liệu sản xuất và chế độ phân phối sản phẩm theo lao động của mỗi người.\" (V.I. Lênin: Toàn tập, t.31, tr.220). (tr. 95–97)", bg: "bg-accent/20", textClass: "text-accent" },
+              { num: 3, text: "Chủ nghĩa Xã hội là chế độ xã hội do nhân dân lao động làm chủ. (tr. 98)", bg: "bg-gold-dark/20", textClass: "text-gold-dark" },
+              { num: 4, text: "Chủ nghĩa Xã hội có nhà nước kiểu mới mang bản chất giai cấp công nhân, đại diện cho lợi ích, quyền lực và ý chí của nhân dân lao động. (tr. 98–99)", bg: "bg-primary/20", textClass: "text-primary" },
+              { num: 5, text: "Chủ nghĩa Xã hội có nền văn hóa phát triển cao, kế thừa và phát huy những giá trị của văn hóa dân tộc và tinh hoa văn hóa nhân loại. (tr. 100–101)", bg: "bg-accent/20", textClass: "text-accent" },
+              { num: 6, text: "Chủ nghĩa Xã hội bảo đảm bình đẳng, đoàn kết giữa các dân tộc và có quan hệ hữu nghị, hợp tác với nhân dân các nước trên thế giới. (tr. 101–103)", bg: "bg-gold-dark/20", textClass: "text-gold-dark" },
             ].map((item) => (
               <motion.div
                 key={item.num}
@@ -166,10 +166,10 @@ const SectionTransition = () => {
                 viewport={{ once: true }}
                 className={`bg-card rounded-2xl border border-border p-6 relative overflow-hidden`}
               >
-                <span className={`absolute -top-2 -right-2 text-[5rem] font-black opacity-[0.06] leading-none select-none text-${item.accent}`}>
+                <span className={`absolute -top-2 -right-2 text-[5rem] font-black opacity-[0.06] leading-none select-none ${item.textClass}`}>
                   {item.num}
                 </span>
-                <div className={`w-10 h-10 rounded-xl bg-${item.accent}/20 flex items-center justify-center font-bold text-lg text-${item.accent} mb-3`}>
+                <div className={`w-10 h-10 rounded-xl ${item.bg} flex items-center justify-center font-bold text-lg ${item.textClass} mb-3`}>
                   {item.num}
                 </div>
                 <p className="text-base md:text-lg leading-relaxed text-foreground">{item.text}</p>
