@@ -19,10 +19,10 @@ const SectionDirections = () => {
   const eightRelations = [
     "Quan hệ giữa đổi mới, ổn định và phát triển.",
     "Quan hệ giữa đổi mới kinh tế và đổi mới chính trị.",
-    "Quan hệ giữa kinh tế thị trường và định hướng XHCN.",
-    "Quan hệ giữa phát triển LLSX và xây dựng, hoàn thiện QHSX XHCN.",
+    "Quan hệ giữa kinh tế thị trường và định hướng xã hội chủ nghĩa.",
+    "Quan hệ giữa phát triển lực lượng sản xuất và xây dựng, hoàn thiện quan hệ sản xuất xã hội chủ nghĩa.",
     "Quan hệ giữa tăng trưởng kinh tế và phát triển văn hóa, tiến bộ và công bằng xã hội.",
-    "Quan hệ giữa xây dựng CNXH và bảo vệ Tổ quốc XHCN.",
+    "Quan hệ giữa xây dựng Chủ nghĩa Xã hội và bảo vệ Tổ quốc xã hội chủ nghĩa.",
     "Quan hệ giữa độc lập, tự chủ và hội nhập quốc tế.",
     "Quan hệ giữa Đảng lãnh đạo, Nhà nước quản lý, nhân dân làm chủ.",
   ];
@@ -33,12 +33,12 @@ const SectionDirections = () => {
         <motion.div variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <h2 className="text-2xl md:text-4xl font-bold text-primary mb-2">Phần 5</h2>
           <h3 className="text-xl md:text-3xl font-semibold text-foreground mb-4">
-            Phương hướng xây dựng CNXH ở Việt Nam và Kết luận
+            Phương hướng xây dựng Chủ nghĩa Xã hội ở Việt Nam và Kết luận
           </h3>
           <div className="section-divider w-32 mb-12" />
         </motion.div>
 
-        {/* 5.1 */}
+        {/* 5.1 — Zigzag / alternating layout */}
         <motion.div variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-16">
           <h4 className="text-lg md:text-2xl font-semibold text-gold-dark mb-2">
             5.1. Bảy phương hướng cơ bản theo Cương lĩnh 1991
@@ -56,9 +56,9 @@ const SectionDirections = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="bg-card rounded-xl border border-border p-5 md:p-6 flex gap-4 items-start"
+                className={`flex gap-4 items-start p-5 md:p-6 rounded-xl border border-border ${i % 2 === 0 ? 'bg-card md:mr-12' : 'bg-secondary/20 md:ml-12'}`}
               >
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gold-dark text-primary-foreground flex items-center justify-center font-bold">
+                <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-primary-foreground ${i % 2 === 0 ? 'bg-gold-dark' : 'bg-primary'}`}>
                   {i + 1}
                 </div>
                 <p className="text-base md:text-lg leading-relaxed text-foreground">{d}</p>
@@ -73,14 +73,14 @@ const SectionDirections = () => {
             5.2. Tám phương hướng theo Đại hội XI
           </h4>
           <p className="text-sm text-muted-foreground mb-6 italic">(Giáo trình, tr. 116–117)</p>
-          <div className="bg-card rounded-xl border border-border p-6 md:p-8">
+          <div className="bg-gradient-to-r from-card to-secondary/30 rounded-2xl border border-border p-6 md:p-8">
             <p className="text-base md:text-lg leading-relaxed text-foreground">
               Đại hội XI đã kế thừa và phát triển bảy phương hướng cơ bản của Cương lĩnh 1991 thành tám phương hướng, phù hợp với tình hình mới, bổ sung thêm nội dung về hội nhập quốc tế và phát triển bền vững.
             </p>
           </div>
         </motion.div>
 
-        {/* 5.3 */}
+        {/* 5.3 — Grid of relation cards with icons */}
         <motion.div variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-16">
           <h4 className="text-lg md:text-2xl font-semibold text-gold-dark mb-2">
             5.3. Tám mối quan hệ lớn cần nắm vững
@@ -90,7 +90,7 @@ const SectionDirections = () => {
             Trong quá trình thực hiện các phương hướng cơ bản đó, trong Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội (bổ sung, phát triển năm 2011), Đảng yêu cầu phải đặc biệt chú trọng nắm vững và giải quyết tốt tám mối quan hệ lớn:
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {eightRelations.map((r, i) => (
               <motion.div
                 key={i}
@@ -98,19 +98,20 @@ const SectionDirections = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="bg-primary/5 rounded-xl p-5 border border-primary/10 flex gap-3 items-center"
+                className="bg-card rounded-2xl p-5 border border-border text-center relative overflow-hidden group"
               >
-                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">
+                <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm mx-auto mb-3">
                   {i + 1}
-                </span>
-                <p className="text-base font-medium text-foreground">{r}</p>
+                </div>
+                <p className="text-sm md:text-base font-medium text-foreground leading-snug">{r}</p>
               </motion.div>
             ))}
           </div>
 
           <div className="bg-card rounded-xl border border-border p-6 md:p-8 mt-8">
             <p className="text-base md:text-lg leading-relaxed text-foreground">
-              Thực hiện tám phương hướng và giải quyết thành công các mối quan hệ lớn chính là đưa cách mạng nước ta theo đúng con đường phát triển quá độ lên CHỦ NGHĨA XÃ HỘI bỏ qua chế độ Tư bản chủ nghĩa.
+              Thực hiện tám phương hướng và giải quyết thành công các mối quan hệ lớn chính là đưa cách mạng nước ta theo đúng con đường phát triển quá độ lên Chủ nghĩa Xã hội bỏ qua chế độ Tư bản chủ nghĩa.
             </p>
             <p className="text-sm text-muted-foreground mt-3 italic">(Giáo trình, tr. 117)</p>
           </div>
@@ -121,7 +122,7 @@ const SectionDirections = () => {
           <h4 className="text-lg md:text-2xl font-semibold text-gold-dark mb-6">
             5.4. Liên hệ thực tiễn
           </h4>
-          <div className="bg-accent/10 rounded-xl p-6 md:p-8 border border-accent/30">
+          <div className="relative bg-gradient-to-br from-accent/15 to-primary/10 rounded-2xl p-6 md:p-8 border border-accent/20">
             <p className="text-base md:text-lg leading-relaxed text-foreground">
               Nhờ thực hiện các phương hướng trên, sau gần 40 năm đổi mới (tháng 12/1986 đến tháng 3/2026), Việt Nam đã đạt thành tựu to lớn, có ý nghĩa lịch sử: tăng trưởng kinh tế ổn định, đời sống nhân dân không ngừng được cải thiện, vị thế quốc tế ngày càng nâng cao.
             </p>

@@ -49,7 +49,8 @@ const SectionIntro = () => {
 
         <p className="text-sm text-muted-foreground mb-6 italic">(Giáo trình, tr. 86–87)</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        {/* Horizontal card strip — unique to this section */}
+        <div className="flex flex-col md:flex-row gap-4 mb-12">
           {approaches.map((item, i) => (
             <motion.div
               key={i}
@@ -58,13 +59,14 @@ const SectionIntro = () => {
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-card rounded-xl border border-border p-6 md:p-8 relative overflow-hidden group"
+              className="flex-1 bg-card rounded-2xl border border-border p-6 relative overflow-hidden group"
             >
-              <span className="absolute top-4 right-4 text-5xl font-black text-gold/10 select-none">
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-gold-dark opacity-30 group-hover:opacity-60 transition-opacity" />
+              <span className="text-4xl font-black text-gold/15 select-none block mb-2">
                 {item.num}
               </span>
-              <h5 className="text-lg md:text-xl font-bold text-primary mb-3">{item.title}</h5>
-              <p className="text-base md:text-lg leading-relaxed text-foreground">{item.desc}</p>
+              <h5 className="text-lg md:text-xl font-bold text-primary mb-2">{item.title}</h5>
+              <p className="text-base leading-relaxed text-foreground">{item.desc}</p>
             </motion.div>
           ))}
         </div>
