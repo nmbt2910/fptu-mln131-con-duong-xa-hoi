@@ -4,7 +4,7 @@ An interactive, responsive, and aesthetically premium web-based presentation hub
 
 ---
 
-# 🇺🇸 English Version
+# <img src="https://flagcdn.com/w32/us.png" alt="US Flag" width="32" style="vertical-align: middle; display: inline-block; margin-right: 8px;" /> English Version
 
 ## 1. Project Title
 **Con Đường Xã Hội — Interactive Scientific Socialism Presentation Platform**
@@ -276,7 +276,7 @@ Con Đường Xã Hội serves as a high-fidelity, interactive alternative to le
 
 ---
 
-# 🇻🇳 Phiên Bản Tiếng Việt
+# <img src="https://flagcdn.com/w32/vn.png" alt="VN Flag" width="32" style="vertical-align: middle; display: inline-block; margin-right: 8px;" /> Phiên Bản Tiếng Việt
 
 ## 1. Tiêu Đề Dự Án
 **Con Đường Xã Hội — Nền Tảng Trình Chiếu Tương Tác Môn Chủ Nghĩa Xã Hội Khoa Học**
